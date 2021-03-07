@@ -3,9 +3,7 @@ html {
   scroll-behavior: smooth;
   overflow-y: scroll;
 
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 html::-webkit-scrollbar {
@@ -26,7 +24,8 @@ body {
   position: fixed;
   background-color: rgba(238, 252, 239, 0.747);
   width: 100%;
-  top: 0;
+  bottom: 0;
+  transition: ease-in-out 500ms;
   border-top: rgb(63, 62, 62) solid 2px;
 }
 .nav ul {
@@ -48,6 +47,8 @@ body {
   text-decoration: none;
 }
 #home {
+  scroll-snap-align: start;
+
   height: 100vh;
   background: url(/assets/cover\ -\ Copy_glitched.png) no-repeat center center;
   background-size: cover;
@@ -58,6 +59,8 @@ body {
   color: #fff;
 }
 #about {
+  scroll-snap-align: start;
+
   padding-left: 150px;
   padding-top: 15vh;
   height: 100vh;
@@ -80,6 +83,8 @@ body {
   color: rgb(161, 17, 17);
 }
 #music {
+  scroll-snap-align: start;
+
   gap: 50px;
   display: flex;
   height: 100vh;
@@ -89,6 +94,7 @@ body {
   padding-top: 15vh;
 }
 #contacts {
+  scroll-snap-align: start;
   height: 100vh;
   background: rgb(179, 147, 7);
 }
