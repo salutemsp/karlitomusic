@@ -50,7 +50,8 @@ body {
   scroll-snap-align: start;
 
   height: 100vh;
-  background: url(/assets/cover\ -\ Copy_glitched.png) no-repeat center center;
+  background: url(https://raw.githubusercontent.com/salutemsp/karlitomusic/master/assets/cover.png)
+    no-repeat center center;
   background-size: cover;
 }
 #home h1 {
