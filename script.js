@@ -4,10 +4,10 @@ window.onscroll = function () {
 
 const scrollFunction = function () {
   if (
-    document.body.scrollTop > 300 ||
-    document.documentElement.scrollTop > 300
+    (document.body.scrollTop > 300 && window.innerWidth > 600) ||
+    (document.documentElement.scrollTop > 300 && window.innerWidth > 600)
   ) {
-    document.querySelector(".nav").style.transform = "translateY(-90vh)";
+    document.querySelector(".nav").style.transform = "translateY(-93vh)";
   } else {
     document.querySelector(".nav").style.transform = "translateY(0vh)";
   }

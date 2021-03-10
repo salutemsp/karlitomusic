@@ -22,7 +22,7 @@ body {
 .nav {
   padding: 0px;
   position: fixed;
-  background-color: rgba(238, 252, 239, 0.747);
+  background-color: rgba(226, 218, 217, 0.747);
   width: 100%;
   bottom: 0;
   transition: ease-in-out 500ms;
@@ -37,13 +37,14 @@ body {
   justify-content: center;
 }
 .nav li {
-  padding: 20px;
+  font-size: 1.5em;
+  padding: 10px;
 }
 .nav a:hover {
-  color: red;
+  color: rgb(161, 17, 17);
 }
 .nav a {
-  color: black;
+  color: rgb(54, 54, 54);
   text-decoration: none;
 }
 #home {
@@ -61,6 +62,8 @@ body {
   padding-top: 40vh;
   font-size: 5em;
   color: #fff;
+  padding-left: 40px;
+  text-shadow: black 5px 2px;
 }
 #about {
   scroll-snap-align: start;
@@ -88,29 +91,31 @@ body {
 }
 #music {
   scroll-snap-align: start;
-  padding-top: 10vh;
+
   display: flex;
   justify-content: center;
   height: 100vh;
   background: rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
 }
 #contacts {
   scroll-snap-align: start;
   height: 100vh;
   background: url(https://images.unsplash.com/photo-1489641493513-ba4ee84ccea9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)
     no-repeat center center;
-
   background-size: cover;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 #contacts .website {
   text-align: center;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.5);
-  height: 50vh;
-  width: 100vh;
-  margin-top: 25vh;
+  height: 40vh;
+  width: 70vh;
 }
 #contacts h1 {
   font-size: 3em;
@@ -121,8 +126,81 @@ body {
   justify-content: center;
 }
 .video {
-  height: 80%;
-  width: 80%;
+  height: 70%;
+  width: 70%;
 
   border: solid rgb(63, 62, 62) 3px;
+}
+
+.footer {
+  /* margin-bottom: 0;
+
+  color: rgb(161, 17, 17);
+  text-align: center;
+  width: 100vw;
+  font-size: 1.3em; */
+
+  position: absolute;
+  padding-top: 25vh;
+  right: 0;
+
+  left: 0;
+
+  text-align: center;
+}
+.footer a {
+  text-decoration: none;
+  color: rgb(161, 17, 17);
+}
+.fb:hover {
+  cursor: pointer;
+  color: rgb(161, 17, 17);
+}
+.yt:hover {
+  cursor: pointer;
+  color: rgb(161, 17, 17);
+}
+
+.website a {
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    height: 8vh;
+  }
+  .nav ul {
+    gap: 0;
+  }
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+  #about img {
+    height: 200px;
+    width: 200px;
+  }
+  #about .aboutText {
+    font-size: 2.5em;
+  }
+  .video {
+    height: 50%;
+    width: 80%;
+
+    border: solid rgb(63, 62, 62) 3px;
+  }
+  #contacts .website {
+    width: 200px;
+    height: 150px;
+  }
+  #contacts h1 {
+    font-size: 1.5em;
+  }
+  .footer {
+    padding-top: 30vh;
+  }
 }
